@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ryan & Emily — Wedding</title>
+  <title>James & Ryan — Wedding</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     /* ── Design Tokens ── */
     :root, [data-theme="light"] {
-      --color-bg: #faf7f2;
-      --color-surface: #f5f0e8;
-      --color-border: #d8cfc0;
-      --color-text: #2a2217;
-      --color-text-muted: #7a7062;
-      --color-accent: #7a5c3e;
-      --color-accent-hover: #5e4330;
-      --color-gold: #c9a86c;
-      --color-success-bg: #edf5ec;
-      --color-success-text: #2d6e2a;
+      --color-bg: #edf2e6;
+      --color-surface: #dfe9d8;
+      --color-border: #9ab8a4;
+      --color-text: #182018;
+      --color-text-muted: #567060;
+      --color-accent: #4a7e98;
+      --color-accent-hover: #335e78;
+      --color-gold: #c89a38;
+      --color-success-bg: #e8f0ec;
+      --color-success-text: #2a5848;
       --font-display: 'Cormorant Garamond', Georgia, serif;
       --font-body: 'Jost', 'Helvetica Neue', sans-serif;
       --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
@@ -44,16 +44,16 @@
       --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
     }
     [data-theme="dark"] {
-      --color-bg: #181410;
-      --color-surface: #211e19;
-      --color-border: #3a3428;
-      --color-text: #e8e0d4;
-      --color-text-muted: #9a9080;
-      --color-accent: #c9a86c;
-      --color-accent-hover: #dfc08c;
-      --color-gold: #c9a86c;
-      --color-success-bg: #1a2e19;
-      --color-success-text: #7dba7a;
+      --color-bg: #0c1410;
+      --color-surface: #141e18;
+      --color-border: #283c30;
+      --color-text: #d8e8d0;
+      --color-text-muted: #7a9880;
+      --color-accent: #70a8c0;
+      --color-accent-hover: #90c0d8;
+      --color-gold: #d0a848;
+      --color-success-bg: #102818;
+      --color-success-text: #80c888;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
@@ -173,7 +173,7 @@
     }
     .details-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: 1fr;
       gap: var(--space-6);
       margin-bottom: var(--space-16);
     }
@@ -396,7 +396,7 @@
     /* ── Responsive ── */
     @media (max-width: 640px) {
       .hero-names { line-height: 1.05; }
-      .details-grid { grid-template-columns: 1fr; max-width: 360px; margin-inline: auto; }
+      .hero-names { line-height: 1.05; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
@@ -420,7 +420,7 @@
       <span class="hero-ampersand">&amp;</span>
       James
     </h1>
-    <p class="hero-date">September 20, 2025</p>
+    <p class="hero-date">September 12, 2026</p>
     <div class="hero-divider"></div>
     <a class="btn-scroll" href="#details">
       Details
@@ -438,7 +438,7 @@
           <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
         </svg>
         <p class="detail-card-label">Date</p>
-        <p class="detail-card-value">Saturday<br>September 20, 2025</p>
+        <p class="detail-card-value">Saturday<br>September 12, 2026</p>
       </div>
 
       <div class="detail-card">
@@ -455,8 +455,8 @@
           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
         </svg>
         <p class="detail-card-label">Venue</p>
-        <p class="detail-card-value">The Meadow House</p>
-        <p class="detail-card-sub">1234 Orchard Lane<br>Portland, Oregon 97201</p>
+        <p class="detail-card-value">Laurelhurst Park — Picnic Area 4</p>
+        <p class="detail-card-sub">SE César E. Chávez Blvd. &amp; Stark St<br>Portland, Oregon 97214</p>
       </div>
 
       <div class="detail-card">
@@ -488,7 +488,7 @@
         <p id="successMsg">We look forward to celebrating with you.</p>
       </div>
 
-      <form class="rsvp-form" id="rsvpForm" novalidate>
+      <form id="rsvpForm" class="rsvp-form" action="https://formspree.io/f/mwvdnjdw" method="POST" novalidate>
         <div class="field-row">
           <div class="field">
             <label for="firstName">First Name *</label>
@@ -542,8 +542,8 @@
 
   <!-- Footer -->
   <footer>
-    <span class="footer-names">Ryan &amp; Emily</span>
-    <p>September 20, 2025 &nbsp;·&nbsp; Portland, Oregon</p>
+    <span class="footer-names">James &amp; Ryan</span>
+    <p>September 12, 2026 &nbsp;·&nbsp; Portland, Oregon</p>
     <p style="margin-top: 0.5rem; opacity: 0.5;">Questions? <a href="mailto:hello@example.com" style="color:inherit">hello@example.com</a></p>
   </footer>
 
@@ -552,7 +552,7 @@
     (function(){
       const t = document.querySelector('[data-theme-toggle]');
       const r = document.documentElement;
-      let d = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      let d = 'dark';
       r.setAttribute('data-theme', d);
       const sunSVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`;
       const moonSVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
@@ -600,10 +600,8 @@
     plusYes.addEventListener('change', updatePlusOneName);
     plusNo.addEventListener('change', updatePlusOneName);
 
-    // Form submit (stores in memory — replace with your backend/Netlify Forms/Formspree)
-    const rsvps = [];
-
-    document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+    // Form submit — POSTs to Formspree, shows in-page success UI on completion
+    document.getElementById('rsvpForm').addEventListener('submit', async function(e) {
       e.preventDefault();
       const form = e.target;
 
@@ -617,32 +615,38 @@
         return;
       }
 
-      const entry = {
-        name: `${firstName} ${lastName}`,
-        email,
-        attending: attendance,
-        plusOne: form.plusOne ? form.plusOne.value || null : null,
-        plusOneName: form.plusOneName ? form.plusOneName.value.trim() : '',
-        dietary: form.dietary.value.trim(),
-        submittedAt: new Date().toISOString()
-      };
-      rsvps.push(entry);
-      console.log('RSVP received:', entry);
+      const submitBtn = form.querySelector('.btn-submit');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
 
-      // Show success
-      form.style.display = 'none';
-      const success = document.getElementById('rsvpSuccess');
-      const title = document.getElementById('successTitle');
-      const msg = document.getElementById('successMsg');
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
 
-      success.classList.add('visible');
-      if (attendance === 'yes') {
-        title.textContent = 'You're on the list!';
-        msg.textContent = `We can't wait to celebrate with you, ${firstName}!`;
-      } else {
-        title.textContent = 'We'll miss you.';
-        title.className = 'rsvp-declined';
-        msg.textContent = `Thank you for letting us know, ${firstName}. We'll be thinking of you.`;
+        if (!response.ok) throw new Error('Submission failed');
+
+        // Show success
+        form.style.display = 'none';
+        const success = document.getElementById('rsvpSuccess');
+        const title = document.getElementById('successTitle');
+        const msg = document.getElementById('successMsg');
+
+        success.classList.add('visible');
+        if (attendance === 'yes') {
+          title.textContent = 'You\u2019re on the list!';
+          msg.textContent = `We can\u2019t wait to celebrate with you, ${firstName}!`;
+        } else {
+          title.textContent = 'We\u2019ll miss you.';
+          title.className = 'rsvp-declined';
+          msg.textContent = `Thank you for letting us know, ${firstName}. We\u2019ll be thinking of you.`;
+        }
+      } catch {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send RSVP';
+        alert('Something went wrong. Please try again or contact us directly.');
       }
     });
   </script>
