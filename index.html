@@ -209,6 +209,35 @@
       color: var(--color-text-muted);
       margin-top: var(--space-2);
     }
+    .detail-card-label-group {
+      margin-top: var(--space-6);
+    }
+    .detail-card-sub-nudge {
+      margin-top: var(--space-4);
+    }
+    .detail-card-map {
+      margin-top: var(--space-4);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      width: 100%;
+    }
+    .lodging-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 640px) { .lodging-grid { grid-template-columns: 1fr; } }
+    .lodging-link {
+      display: inline-block;
+      margin-top: var(--space-4);
+      font-size: var(--text-xs);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-accent);
+      padding-bottom: 2px;
+    }
+    .lodging-link:hover { color: var(--color-accent-hover); border-color: var(--color-accent-hover); }
 
     /* ── Divider ── */
     .ornamental-divider {
@@ -446,9 +475,11 @@
         <svg class="detail-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
         </svg>
-        <p class="detail-card-label">Ceremony</p>
+        <p class="detail-card-label">Welcome</p>
+        <p class="detail-card-value">3:00 PM</p>
+        <p class="detail-card-label detail-card-label-group">Ceremony</p>
         <p class="detail-card-value">4:00 PM</p>
-        <p class="detail-card-sub">Reception to follow at 6:00 PM</p>
+        <p class="detail-card-sub detail-card-sub-nudge">Reception to follow at 5:00 PM</p>
       </div>
 
       <div class="detail-card">
@@ -456,8 +487,9 @@
           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
         </svg>
         <p class="detail-card-label">Venue</p>
-        <p class="detail-card-value">Laurelhurst Park — Picnic Area 4</p>
+        <p class="detail-card-value">Laurelhurst Park — Picnic Area E</p>
         <p class="detail-card-sub">SE César E. Chávez Blvd. &amp; Stark St<br>Portland, Oregon 97214</p>
+        <img class="detail-card-map" src="images/venue-map.png" alt="Map of Laurelhurst Park with Picnic Area E circled near the pond, off SE Laurelhurst Place">
       </div>
 
       <div class="detail-card">
@@ -467,6 +499,47 @@
         <p class="detail-card-label">RSVP Deadline</p>
         <p class="detail-card-value">August 1, 2025</p>
         <p class="detail-card-sub">Kindly respond by this date</p>
+      </div>
+    </div>
+
+    <div class="ornamental-divider"><span>✦</span></div>
+  </section>
+
+  <!-- Nearby Lodging -->
+  <section class="section" id="lodging">
+    <h2 class="section-title">Nearby Lodging</h2>
+
+    <div class="details-grid lodging-grid">
+      <div class="detail-card">
+        <p class="detail-card-value">Tiny Houses</p>
+        <p class="detail-card-sub">Cute, small, and the closest to our house and Laurelhurst Park.</p>
+        <p class="detail-card-sub">15 minute walk to the park</p>
+        <p class="detail-card-sub">Approx. $250/night</p>
+        <a class="lodging-link" href="https://www.tinydigshotel.com/about" target="_blank" rel="noopener">Visit Website</a>
+      </div>
+
+      <div class="detail-card">
+        <p class="detail-card-value">Jupiter Hotel</p>
+        <p class="detail-card-sub">Modern, hip hotel.</p>
+        <p class="detail-card-sub">33 minute walk to the park and close to our house</p>
+        <p class="detail-card-sub">Approx. $200–$300/night</p>
+        <a class="lodging-link" href="https://www.jupiterhotel.com/" target="_blank" rel="noopener">Visit Website</a>
+      </div>
+
+      <div class="detail-card">
+        <p class="detail-card-value">Hyatt Convention Center</p>
+        <p class="detail-card-sub">Mid-level nice — Hyatt Hotel near Portland's Convention Center.</p>
+        <p class="detail-card-sub">50 minute walk to the park</p>
+        <p class="detail-card-sub">Approx. $230/night</p>
+        <a class="lodging-link" href="https://www.hyatt.com/hyatt-regency/en-US/pdxrp-hyatt-regency-portland-at-the-oregon-convention-center" target="_blank" rel="noopener">Visit Website</a>
+      </div>
+
+      <div class="detail-card">
+        <p class="detail-card-value">Paramount Hotel</p>
+        <p class="detail-card-sub">Nice hotel in Downtown Portland.</p>
+        <p class="detail-card-sub">1 hour walk to the park</p>
+        <p class="detail-card-sub">Approx. $140/night</p>
+        <a class="lodging-link" href="https://www.portlandparamount.com/" target="_blank" rel="noopener">Visit Website</a>
       </div>
     </div>
 
