@@ -238,6 +238,14 @@
       padding-bottom: 2px;
     }
     .lodging-link:hover { color: var(--color-accent-hover); border-color: var(--color-accent-hover); }
+    .detail-card-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-2);
+      margin-top: var(--space-4);
+    }
+    .detail-card-links .lodging-link { margin-top: 0; }
 
     /* ── Divider ── */
     .ornamental-divider {
@@ -487,9 +495,12 @@
           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
         </svg>
         <p class="detail-card-label">Venue</p>
-        <p class="detail-card-value">Laurelhurst Park — Picnic Area F</p>
-        <p class="detail-card-sub">SE César E. Chávez Blvd. &amp; Stark St<br>Portland, Oregon 97214</p>
-        <img class="detail-card-map" src="images/venue-map.png" alt="Map of Laurelhurst Park with Picnic Area F circled near the entrance off SE Laurelhurst Place">
+        <p class="detail-card-value">Rae Loft</p>
+        <p class="detail-card-sub">2222 NE Oregon St Ste 207<br>Portland, Oregon 97232</p>
+        <div class="detail-card-links">
+          <a class="lodging-link" href="https://www.raeloftpdx.com/" target="_blank" rel="noopener">Visit Website</a>
+          <a class="lodging-link" href="https://www.google.com/maps/search/?api=1&query=Rae+Loft+2222+NE+Oregon+St+Ste+207+Portland+OR+97232" target="_blank" rel="noopener">View on Google Maps</a>
+        </div>
       </div>
 
       <div class="detail-card">
